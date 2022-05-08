@@ -20,10 +20,12 @@ public class Homework {
   
     private static int sum(int a, int b) {
         double s =  Double.sum(a,b);
-        if (s > Integer.MAX_VALUE - 1 || s < Integer.MIN_VALUE + 1)
+        if (s > Integer.MAX_VALUE|| s < Integer.MIN_VALUE) {
             return -1;
-         else
+        }
+         else {
             return Integer.sum(a, b);
+        }
     }
 
     public static int max(int a, int b) {
