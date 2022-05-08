@@ -5,6 +5,7 @@ public class Homework {
         System.out.println("Max: " + max(4, 3));
         System.out.println("Hypotenuse: " + calculateHypotenuse(4, 3));
     }
+  
     private static void printLiterals() {
         System.out.println("Boolean: " + true);
         System.out.println("String: " + "Hello");
@@ -16,17 +17,21 @@ public class Homework {
         System.out.println("Float: " + 1.23f);
         System.out.println("Double: " + 15.84d);
     }
+  
     private static int sum(int a, int b) {
         double s =  Double.sum(a,b);
         if (s > Integer.MAX_VALUE - 1 || s < Integer.MIN_VALUE + 1)
             return -1;
-        else
+         else
             return Integer.sum(a, b);
     }
+
     public static int max(int a, int b) {
         return Integer.max(a, b);
     }
+
     public static double calculateHypotenuse(int a, int b) {
         return Math.sqrt(a * a + b * b);
     }
 }
+
