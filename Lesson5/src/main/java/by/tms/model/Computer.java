@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Computer {
-        public String CPU;
+    public String CPU;
     public String RAM;
     public String HDD;
     public int cycle;

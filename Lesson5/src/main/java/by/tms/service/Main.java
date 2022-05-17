@@ -21,6 +21,7 @@ public class Main {
         comp.on();
         comp.outInfo();
         comp.off();
+        comp.outInfo();
 
     }
 }
