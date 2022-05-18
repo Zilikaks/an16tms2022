@@ -1,4 +1,3 @@
-import java.sql.Array;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -14,7 +13,7 @@ public class Homework {
         }
         System.out.println(getMinAbsNumber(Math.abs(scan.nextFloat()),Math.abs(scan.nextFloat()),Math.abs(scan.nextFloat())));
 
-        int hours = getHoursFromSecs(Math.abs(scan.nextInt()));
+        int hours =8 - getHoursFromSecs(Math.abs(scan.nextInt()));
         switch (hours) {
             case 0 -> System.out.println("Less than an hour left");
             case 1 -> System.out.println("Only 1 hour left");
@@ -31,7 +30,7 @@ public class Homework {
                 Int           X     Y     Y    Y    -    NY   NY   NY
                 Long          X     Y     Y    Y    Y    -    NY   NY
                 float         X     Y     Y    Y    Y    Y    -    NY
-                double        X     Y     Y    Y    Y    Y    Y    -""".indent(1));
+                double        X     Y     Y    Y    Y    Y    Y    -""");
 
         System.out.println(average(new int[]{1,8,3,72,-6,2}));
         System.out.println(max(new int[]{1,8,3,72,-6,2}));
@@ -52,14 +51,20 @@ public class Homework {
     }
 
     public static int getHoursFromSecs(int secs) {
-        return 8-secs/60/60;
+        return secs/60/60;
     }
 
     public static double average(int[] array) {
-        return Arrays.stream(array).average().getAsDouble();
+        return Arrays.stream(array).filter(Objects::nonNull).average().orElseGet(()->{
+            System.out.println("Incorrect array");
+            return 0;
+        });
     }
 
     public static int max(int[] array) {
-        return Arrays.stream(array).max().getAsInt();
+        return Arrays.stream(array).max().orElseGet(()->{
+            System.out.println("Incorrect array");
+            return 0;
+        });
     }
 }
