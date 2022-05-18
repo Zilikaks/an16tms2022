@@ -6,7 +6,7 @@ public class User {
 
     public User(){
         age = 18;
-        gender = "female";
+        gender = "male";
     }
 
     public User(String name, String secName){
